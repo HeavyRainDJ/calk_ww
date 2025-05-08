@@ -1,0 +1,181 @@
+/* styles.css */
+:root {
+    /* Светлая тема */
+    --bg-color: #f9f7f7;
+    --calculator-bg: #ffffff;
+    --display-bg: #f0f8ff;
+    --btn-bg: #e6f3ff;
+    --btn-hover: #cce0ff;
+    --operator-bg: #ffe6e6;
+    --operator-hover: #ffc9c9;
+    --equal-bg: #e6ffe6;
+    --equal-hover: #d1e7dd;
+    --text-color: #333333;
+}
+
+[data-theme="dark"] {
+    /* Тёмная тема */
+    --bg-color: #1e1e1e;
+    --calculator-bg: #2b2b2b;
+    --display-bg: #333333;
+    --btn-bg: #444444;
+    --btn-hover: #555555;
+    --operator-bg: #5a3e3e;
+    --operator-hover: #7a4e4e;
+    --equal-bg: #3e5a3e;
+    --equal-hover: #4e7a4e;
+    --text-color: #ffffff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--bg-color);
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:url(''); /* Пример фонового изображения */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; 
+    opacity: 0.3; /* Полупрозрачность фона */
+}
+
+.github-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #24292e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.github-button:hover {
+    background-color: #333;
+}
+
+.dropdown {
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid var(--btn-bg);
+    border-radius: 5px;
+    background-color: var(--calculator-bg);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.details {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.lab-purpose {
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.highlight {
+    color: #007bff; /* Подсветка слов */
+    font-weight: bold;
+}
+
+.calculator {
+    background-color: var(--calculator-bg);
+    border: 1px solid var(--btn-bg);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#display {
+    width: 100%;
+    height: 50px;
+    background-color: var(--display-bg);
+    border: 1px solid var(--btn-bg);
+    text-align: right;
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    height: 50px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    color: var(--text-color);
+    background-color: var(--btn-bg);
+    border: 1px solid var(--btn-bg);
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background-color: var(--btn-hover);
+    transform: scale(1.05);
+}
+
+.btn.operator {
+    background-color: var(--operator-bg);
+    border-color: var(--operator-bg);
+}
+
+.btn.operator:hover {
+    background-color: var(--operator-hover);
+}
+
+.btn.equal {
+    background-color: var(--equal-bg);
+    border-color: var(--equal-bg);
+}
+
+.btn.equal:hover {
+    background-color: var(--equal-hover);
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}

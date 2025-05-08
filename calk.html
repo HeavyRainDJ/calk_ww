@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор с дополнительными элементами</title>
+    <link rel="stylesheet" href="calk.css">
+</head>
+<body>
+    <div class="header">
+        <div class="background-image"></div>
+        <a href="https://github.com" target="_blank" class="github-button">GitHub</a>
+        <select class="dropdown">
+            <option value="option1">Выберите действие</option>
+            <option value="option2">Настройки</option>
+            <option value="option3">Справка</option>
+        </select>
+        <details class="details">
+            <summary>Автор</summary>
+            <p><strong>ФИО:</strong> Логинов Виктор Николаевич</p>
+            <p><strong>Группа:</strong>СГН3-62Б</p>
+        </details>
+        <p class="lab-purpose">
+            Цель лабораторной работы: <br> 
+            <span class="highlight">знакомство</span> с основами <span class="highlight">HTML</span> и <span class="highlight">CSS</span>.
+        </p>
+    </div>
+
+    <!-- Калькулятор -->
+    <div class="calculator">
+        <!-- Кнопка переключения темы -->
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <button onclick="clearDisplay()" class="btn operator">C</button>
+            <button onclick="deleteLast()" class="btn operator">←</button>
+            <button onclick="changeSign()" class="btn operator">+/-</button>
+            <button onclick="calculatePercentage()" class="btn operator">%</button>
+
+            <button onclick="appendNumber('7')" class="btn">7</button>
+            <button onclick="appendNumber('8')" class="btn">8</button>
+            <button onclick="appendNumber('9')" class="btn">9</button>
+            <button onclick="appendOperator('/')" class="btn operator">÷</button>
+
+            <button onclick="appendNumber('4')" class="btn">4</button>
+            <button onclick="appendNumber('5')" class="btn">5</button>
+            <button onclick="appendNumber('6')" class="btn">6</button>
+            <button onclick="appendOperator('*')" class="btn operator">×</button>
+
+            <button onclick="appendNumber('1')" class="btn">1</button>
+            <button onclick="appendNumber('2')" class="btn">2</button>
+            <button onclick="appendNumber('3')" class="btn">3</button>
+            <button onclick="appendOperator('-')" class="btn operator">−</button>
+
+            <button onclick="appendNumber('0')" class="btn zero">0</button>
+            <button onclick="appendNumber('000')" class="btn">000</button>
+            <button onclick="appendNumber('.')" class="btn">.</button>
+            <button onclick="appendOperator('+')" class="btn operator">+</button>
+
+            <button onclick="calculateSquareRoot()" class="btn operator">√</button>
+            <button onclick="calculateSquare()" class="btn operator">x²</button>
+            <button onclick="calculateFactorial()" class="btn operator">x!</button>
+            <button onclick="calculateResult()" class="btn equal">=</button>
+        </div>
+    </div>
+    <script src="calk.js"></script>
+</body>
+</html>
+
+<!-- Поменяйте цветовую палитру калькулятора с оранжево-серой на любую другую; (+)
+Сделайте фон калькулятора темным (наподобие ночной темы); (+)
+Сделайте кнопки квадратными вместо круглых.; (+)
+Измените цвет вывода результата на любой другой; (+)
+Сделайте окно вывода со скруглеными краями; (+)
+Поменяйте шрифт цифр;
+Сделайте шрифт более толстым; (+)
+Измените цвет при наведении мышки на кнопку на другой; (+)
+Добавьте надпись внизу "ЛР выполнена ФИО";
+Выровняйте калькулятор по центру; (+)
+Увеличьте размер окна вывода; (+)
+Добавьте кнопку для смены темы (смена цвета фона); (+)
+Сделайте шрифт тоньше; 
+Смените цвет шрифта; (+)
+Добавьте любое изображение на фон; 
+Добавьте кнопку со ссылкой на GitHub; (+)
+Сделайте поле с выпадающим списком; (+)
+Сделайте сворачивающиеся и разворачивающиеся подробности (Автор -> ФИО, Группа); (+)
+Добавьте поле с целью ЛР и подсветить слова: знакомство, HTML, CSS (с помощью тега). (+)
+
+
+
+
+Запрограммируйте операцию смены знака +/-; (+)
+Запрограммируйте операцию вычисления процента %; (+)
+Добавьте кнопку стирания введенной цифры назад (backspace). Расположить кнопку можно, например, на месте нерабочих +/- и % кнопок; (+)
+Сделайте смену цвета фона по кнопке; (+)
+Запрограммируйте операцию вычисления квадратного корня √; (+)
+Запрограммируйте операцию возведения в квадрат x²; (+)
+Запрограммируйте операцию вычисления факториала x!; (+)
+Добавьте кнопку, которая за раз добавляет сразу три нуля (000); (+)
+Запрограммируйте накапливаемое сложние; (+)
+Запрограммируйте накапливаемое вычитание; (+)
+Сделайте смену цвета окна вывода результата по кнопке. (+)
+Добавьте в калькулятор вашу индивидуальную операцию (+)
+Скопируйте для калькулятора стилистику веб-ресурса, которая не будет повторяться с остальными студентами (+) -->
